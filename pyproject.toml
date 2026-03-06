@@ -1,0 +1,86 @@
+[project]
+name = "planefyi"
+version = "0.1.0"
+description = "Aircraft models and specifications API client — planefyi.com"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "FYIPedia" }]
+keywords = [
+    "aircraft",
+    "airplane",
+    "aviation",
+    "specification",
+    "manufacturer",
+    "boeing",
+    "airbus",
+    "plane",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+    "Environment :: Console",
+]
+dependencies = []
+
+[project.optional-dependencies]
+api = ["httpx>=0.27"]
+cli = ["typer>=0.15", "rich>=13.0"]
+mcp = ["mcp>=1.0"]
+all = ["planefyi[api,cli,mcp]"]
+
+[project.scripts]
+planefyi = "planefyi.cli:app"
+
+[project.entry-points."mcp.servers"]
+planefyi = "planefyi.mcp_server:mcp"
+
+[project.urls]
+Homepage = "https://planefyi.com"
+Documentation = "https://planefyi.com/developers/"
+Repository = "https://github.com/fyipedia/planefyi"
+Issues = "https://github.com/fyipedia/planefyi/issues"
+Changelog = "https://github.com/fyipedia/planefyi/releases"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/planefyi"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF022"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+
+[dependency-groups]
+dev = [
+    "httpx>=0.27",
+    "mcp>=1.0",
+    "mypy>=1.19.1",
+    "pytest>=9.0.2",
+    "rich>=13.0",
+    "ruff>=0.15.4",
+    "typer>=0.15",
+]
