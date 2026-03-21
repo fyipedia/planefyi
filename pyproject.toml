@@ -1,6 +1,6 @@
 [project]
 name = "planefyi"
-version = "0.1.0"
+version = "0.1.1"
 description = "Aircraft models and specifications API client — planefyi.com"
 readme = "README.md"
 license = "MIT"
@@ -40,6 +40,7 @@ all = ["planefyi[api,cli,mcp]"]
 
 [project.scripts]
 planefyi = "planefyi.cli:app"
+planefyi-mcp = "planefyi.mcp_server:main"
 
 [project.entry-points."mcp.servers"]
 planefyi = "planefyi.mcp_server:mcp"
