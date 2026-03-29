@@ -262,6 +262,17 @@ Part of the [FYIPedia](https://fyipedia.com) open-source developer tools ecosyst
 | **planefyi** | [PyPI](https://pypi.org/project/planefyi/) | [npm](https://www.npmjs.com/package/planefyi) | **Aircraft models, specifications, manufacturers — [planefyi.com](https://planefyi.com/)** |
 | trainfyi | [PyPI](https://pypi.org/project/trainfyi/) | [npm](https://www.npmjs.com/package/trainfyi) | Railway stations, train routes, rail networks — [trainfyi.com](https://trainfyi.com/) |
 
+## Embed Widget
+
+Embed [PlaneFYI](https://planefyi.com) widgets on any website with [planefyi-embed](https://widget.planefyi.com):
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/planefyi-embed@1/dist/embed.min.js"></script>
+<div data-planefyi="entity" data-slug="example"></div>
+```
+
+Zero dependencies · Shadow DOM · 4 themes (light/dark/sepia/auto) · [Widget docs](https://widget.planefyi.com)
+
 ## License
 
 MIT
