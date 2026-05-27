@@ -273,6 +273,15 @@ Embed [PlaneFYI](https://planefyi.com) widgets on any website with [planefyi-emb
 
 Zero dependencies · Shadow DOM · 4 themes (light/dark/sepia/auto) · [Widget docs](https://widget.planefyi.com)
 
+## Recently Updated (v0.1.2)
+
+Latest content state on [https://planefyi.com](https://planefyi.com):
+- [Homepage](https://planefyi.com)
+- [Developer documentation](https://planefyi.com/developers/)
+- [Sitemap (full content index)](https://planefyi.com/sitemap.xml)
+
+Version bumped 2026-05-27 as part of the FYIPedia [SEO recovery refresh](https://github.com/dobestan).
+
 ## License
 
 MIT

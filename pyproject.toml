@@ -1,6 +1,6 @@
 [project]
 name = "planefyi"
-version = "0.1.1"
+version = "0.1.2"
 description = "Aircraft models and specifications API client — planefyi.com"
 readme = "README.md"
 license = "MIT"
